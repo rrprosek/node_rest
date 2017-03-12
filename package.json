@@ -1,0 +1,21 @@
+{
+  "name": "BookAPI",
+  "version": "1.0.0",
+  "description": "A Book API",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.0",
+    "mongoose": "^4.8.7"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.0",
+    "gulp": "^3.9.1",
+    "nodemon": "^1.11.0"
+  }
+}
