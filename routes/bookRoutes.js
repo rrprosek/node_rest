@@ -3,7 +3,7 @@ var express = require('express');
 var routes = function (Book) {
     var bookRouter = express.Router();
 
-    bookRouter.route('/Books')
+    bookRouter.route('/')
         .post(function (req, res) {
             var book = new Book(req.body);
             book.save();
@@ -38,7 +38,7 @@ var routes = function (Book) {
             });
         });
 
-    bookRouter.route('/Books/:bookId')
+    bookRouter.route('/:bookId')
         .get(function (req, res) {
             console.log(req.params.bookId);
             Book.findById(req.params.bookId, function (err, book) {

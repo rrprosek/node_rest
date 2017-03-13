@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 //Routing
 var bookRouter = require('./routes/bookRoutes')(Book);
 
-app.use('/api', bookRouter);
+app.use('/api/books', bookRouter);
 
 //Simple Route
 app.get('/', function (req, res) {
