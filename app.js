@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 
 var db = mongoose.connect('mongodb://192.168.178.49/bookAPI'); // eslint-disable-line
 
-
+var Book = require('./models/bookModel');
 var app = express();
 var port = process.env.port || 3000;
 
@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //Routing
-var bookRouter = require('./routes/bookRoutes')();
+var bookRouter = require('./routes/bookRoutes')(Book);
 
 app.use('/api', bookRouter);
 

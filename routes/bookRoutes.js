@@ -1,10 +1,6 @@
 var express = require('express');
 
-
-
-var routes = function () {
-
-    var Book = require('../models/bookModel');
+var routes = function (Book) {
     var bookRouter = express.Router();
 
     bookRouter.route('/Books')
@@ -41,7 +37,6 @@ var routes = function () {
                 }
             });
         });
-
 
     bookRouter.route('/Books/:bookId')
         .get(function (req, res) {
